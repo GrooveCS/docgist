@@ -80,7 +80,7 @@ function DocGist($) {
     gist.getGistAndRenderPage(renderContent, urlInfo.id, DEFAULT_SOURCE);
 
     $(document).ready(function () {
-        if (top.location != self.location) {
+        if (top.location != self.location || urlInfo.id.length != 0) {
             $('#main-menu').css('display', 'none');
         }
         $shortUrlDialog = $('#share-short-url-form').hide();
